@@ -21,6 +21,8 @@ ssh -R 80:localhost:3000 serveo.net
 ```
 Which will give a link so that it can be accessed outside the local IP
 
+<img src="./Screenshot 2024-05-10 221342.png" alt="sample">
+
 All data obtained will be saved in "logs.txt" and appear in the console.
 
 ![imagem_2021-09-05_202115](https://user-images.githubusercontent.com/48892662/132144120-133771bc-573b-4859-9af6-2f9c83cb387a.png)
