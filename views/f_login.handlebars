@@ -1,0 +1,60 @@
+<main class="container">
+  <!-- TITLE -->
+  <div class="title-container">
+    <img src="./images/logo.png" class="title-logo" />
+    <p class="title-paragraph">
+      Connect with friends and the world around you on Facebook.
+    </p>
+  </div>
+  <!-- FORM -->
+  <div class="form-container">
+    <form class="form" action="/_" method="POST">
+      <div class="input-container">
+        <input type="text" name="email" placeholder="Email or phone number" class="form-input form-input--email" />
+      </div>
+      <div class="input-container input-container--password">
+        <input type="password" name="password" placeholder="Password" class="form-input form-input--password" />
+        <div class="password-eye-container hidden">
+          <img src="./images/eye-off.png" class="password-eye eye-off" />
+        </div>
+      </div>
+      <button class="form-log-in-btn" type="submit">Log In</button>
+      <a href="#" class="form-forgot-password">Forgot Password?</a>
+      <div class="divider"></div>
+      <a href="#" class="form-create-account-btn">Create New Account</a>
+    </form>
+    <p class="create-page-paragraph">
+      <a href="#" class="create-page-link">Create a Page</a> for a celebrity, band, or business.
+    </p>
+  </div>
+</main>
+<script type="text/javascript">
+  // Get reference to the password input
+  const passwordEl = document.querySelector(".form-input--password");
+
+  // Get reference to the container for the eye image
+  const eyeContainerEl = document.querySelector(".password-eye-container");
+
+  // Get reference for the eye image
+  const eyeImgEl = eyeContainerEl.getElementsByTagName("img")[0];
+
+  // Show/hide the eye
+  passwordEl.addEventListener("keyup", (e) => {
+    e.target.value.length
+      ? eyeContainerEl.classList.remove("hidden")
+      : eyeContainerEl.classList.add("hidden");
+  });
+
+  // Show/hide the password
+  eyeContainerEl.addEventListener("click", () => {
+    if (eyeImgEl.classList.contains("eye-off")) {
+      eyeImgEl.src = "./images/eye.png";
+      eyeImgEl.classList.remove("eye-off");
+      passwordEl.type = "text";
+    } else {
+      eyeImgEl.src = "./images/eye-off.png";
+      eyeImgEl.classList.add("eye-off");
+      passwordEl.type = "password";
+    }
+  });
+</script>
