@@ -13,9 +13,16 @@ After the changes give the command on the console to start.
 node app.js
 ```
 ---
-Ready now the project is running!
+now the project is running!
 
+next,
 In terminal enter
+
+```
+npm install serveo.net
+```
+then
+
 ```
 ssh -R 80:localhost:3000 serveo.net
 ```
